@@ -11,7 +11,7 @@ def receive_data(ws):
         print(ws.recv())
 
 colorama.init()
-uri = "ws://chat-micro.herokuapp.com:8080"
+uri = "ws://chat-micro.herokuapp.com/:8080"
 ws = create_connection(uri)
 Thread(target=send_data, args=(ws, )).start()
 Thread(target=receive_data, args=(ws, )).start()
